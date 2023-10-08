@@ -5,4 +5,13 @@ def find_max_min_sum(data):
         data: list of numbers
     returns: sum of the maximum and minimum numbers in the list
     """
-    return 0
+    ma=mi=data[0]
+    a=0
+    while a<len(data):
+        if ma<=data[a]:
+            ma=data[a]
+        if mi>=data[a]:
+            mi=data[a]
+        a+=1
+    return mi+ma
+print(find_max_min_sum([1,2,3,4,5,6,7]))
